@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Infoconv by infoconv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Infoconv</h1>
+      <h2 class="project-tagline">Documentação do projeto Infoconv</h2>
+      <a href="https://github.com/infoconv/docs" class="btn">View on GitHub</a>
+      <a href="https://github.com/infoconv/docs/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/infoconv/docs/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="prefácio" class="anchor" href="#pref%C3%A1cio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prefácio</h1>
+
+<p>O Projeto Infoconv trata-se de um compêndio de informações disponibilizadas aos interessados em consumir os Serviços  de Consultas de CPF / CNPJ da Receita Federal do Brasil. Um guia para o entendimento das fases necessárias para que uma aplicação comece a consumir os serviços, bem como códigos exemplos e procedimentos. Ir além dos manuais e guias disponibilizados pela RFB preenchendo as lacunas deixadas pelo processo formal. </p>
+
+<ul>
+<li><a href="https://github.com/infoconv/docs/wiki">Inicio</a></li>
+<li>Certificado Digital
+
+<ul>
+<li><a href="https://github.com/infoconv/docs/wiki/Certificado-Digital---keystore">Keystore</a></li>
+<li><a href="https://github.com/infoconv/docs/wiki/Certificado-Digital---truststore">Truststore</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/infoconv/docs/wiki/SOAP-UI---Configura%C3%A7%C3%A3o-e-uso">Configurando SOAP UI</a></li>
+<li>Perfis de consulta de CPF
+
+<ul>
+<li><a href="https://github.com/infoconv/docs/wiki/CPF-Perfil-1">Perfil 1</a></li>
+<li><a href="https://github.com/infoconv/docs/wiki/CPF-Perfil-2">Perfil 2</a></li>
+<li><a href="https://github.com/infoconv/docs/wiki/CPF-Perfil-3">Perfil 3</a></li>
+<li><a href="https://github.com/infoconv/docs/wiki/CPF-Perfil-D">Perfil D</a></li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="começando" class="anchor" href="#come%C3%A7ando" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Começando</h1>
+
+<p>O ponto de partida é a celebração do contrato de recebimento de informações e serviços que deve ser realizado junto a Secretaria da Receita Federal do Brasil - SRFB para aplicações cliente utilizarem o Sistema de Informações para Convenentes via Web Service - InfoConv-WS.</p>
+
+<h2>
+<a id="pré-requisitos" class="anchor" href="#pr%C3%A9-requisitos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pré-Requisitos</h2>
+
+<p>Para que os orgãos possam acessar as informações cadastrais da Receita Federal do Brasil (RFB) é
+necessário a celebração de convênio com a RFB.
+Os convênios da RFB para fornecimento de informações cadastrais a órgãos públicos são
+regulados pela Instrução Normativa SRF nº 19, de 17 de fevereiro de 1998. O referido ato normativo
+pode ser encontrado no seguinte endereço eletrônico:
+[<a href="http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=13242&amp;visao=compilado">http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=13242&amp;visao=compilado</a>]
+Procedimentos para celebração de convênio com a RFB:
+1. A autoridade máxima do órgãos público interessado em obter informações de cadastro da
+RFB pode dirigir ofício ao Secretário da Receita Federal do Brasil propondo celebração de
+convênio. No aludido ofício, o proponente deverá especificar as informações que pretende obter,
+justificar a necessidade das aludidas informações, demonstrar que atende aos requisitos da
+Instrução Normativa SRF nº 19, de 1998, e indicar as informações que se dispõe a fornecer à
+RFB.
+2. A minuta referencial de convênio pode ser encontrada no seguinte endereço eletrônico na
+internet:
+<a href="http://www.receita.fazenda.gov.br/legislacao/portarias/ant2001/1998/AnexoIvportsrf114998.htm">http://www.receita.fazenda.gov.br/legislacao/portarias/ant2001/1998/AnexoIvportsrf114998.htm</a>
+3. Correspondência para propor celebração de convênio pode ser remetida para o seguinte
+endereço:
+Secretaria da Receita Federal do Brasil
+Edifício Sede do Ministério da Fazenda, Bloco P, 7º Andar
+Esplanada dos Ministérios
+CEP 70.048-900, Brasília, DF
+4. Informações adicionais sobre o assunto podem ser obtidas pelo telefone 61-3412.2704.</p>
+
+<h1>
+<a id="fluxo-resumido-das-atividades-do-convênio-ao-consumo-do-webservice-infoconv" class="anchor" href="#fluxo-resumido-das-atividades-do-conv%C3%AAnio-ao-consumo-do-webservice-infoconv" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fluxo Resumido das Atividades do Convênio ao Consumo do WebService Infoconv</h1>
+
+<p><img src="https://github.com/infoconv/docs/blob/master/images/Diagrama%20de%20Atividades%20-%20Infoconv%20-%20Simplificado.png?raw=true" alt="Fluxo Resumido das Atividades do Convênio ao Consumo do Serviço" title="Fluxo Resumido das Atividades do Convênio ao Consumo do Serviço"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/infoconv/docs">Infoconv</a> is maintained by <a href="https://github.com/infoconv">infoconv</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
